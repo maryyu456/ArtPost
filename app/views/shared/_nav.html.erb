@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+  <ul class="nav justify-content-end bg-secondary">
+    <li class="nav-item">
+      <%= link_to "hi, " + current_user.display_name, edit_user_registration_path, class: "btn btn-color" %>
+      <!--<span>hi, %= current_user.email %></span>-->
+    </li>
+    <li class="nav-item">
+      <%= link_to "編輯個人檔案", edit_user_registration_path, class: "btn btn-color" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "登出", destroy_user_session_path, method: "delete" , class: "btn btn-color" %>
+    </li>
+  </ul>
+<% else %>
+  <ul class="nav justify-content-end bg-secondary">
+    <li class="nav-item">
+      <%= link_to "開始註冊", new_user_registration_path, class: "btn btn-color" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "登入", new_user_session_path, class: "btn btn-color" %>
+    </li>
+  </ul>
+<% end %>

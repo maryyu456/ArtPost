@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @artwork.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @artwork.description %>
+</p>
+
+
+<p>
+  <strong>image:</strong>
+  <%= image_tag @artwork.image_url(:thumb).to_s %>
+</p>
+<% if can? :update, @artwork %>
+  <%= link_to '編輯', edit_artwork_path(@artwork), class: "btn btn-success" %>
+<% end %>
+<!--if can? :update, @artwork-->
+
+<%= link_to 'Back', artworks_path, class:"btn btn-dark" %>
+
+<hr/>
+<% if can? :destroy, @artwork %>
+  <%= link_to '刪除', @artwork, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
+<% end %>
+
+

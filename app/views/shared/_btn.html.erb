@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+  <div class="sign-btn position-absolute ">
+    <h1>Post your Art on this ground!!</h1>
+    <span class="post-btn"><%= link_to "上傳你的作品", artworks_path, class: "btn btn-color" %></span>
+  </div>
+<% else %>
+  <div class="sign-btn position-absolute ">
+    <h1>Post your Art on this ground!!</h1>
+  </div>
+<% end %>
+
