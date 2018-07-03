@@ -1,6 +1,6 @@
-<h1>Editing Artwork</h1>
+<h1>編輯作品</h1>
 
 <%= render 'form', artwork: @artwork %>
 
-<%= link_to 'Show', @artwork %> |
-<%= link_to 'Back', artworks_path %>
+<%= link_to 'Show', @artwork, class:"btn btn-info" %> |
+<%= link_to '上一頁', artworks_path, class: "badge badge-primary" %>

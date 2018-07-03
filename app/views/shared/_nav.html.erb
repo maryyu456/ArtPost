@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <ul class="nav justify-content-end bg-secondary">
     <li class="nav-item">
-      <%= link_to "hi, " + current_user.display_name, edit_user_registration_path, class: "btn btn-outline-info" %>
+      <div class="user-name">歡迎, <%= current_user.display_name %> !!</div>
       <!--<span>hi, %= current_user.email %></span>-->
     </li>
     <li class="nav-item">
