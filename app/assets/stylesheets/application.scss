@@ -105,3 +105,19 @@ body{
   line-height: 40px;
 }
 
+.li {
+  font-size: 16px;
+  .nav-item{
+    font-family: "Microsoft JhengHei", sans-serif;
+    background: #5975a5;
+    color: #FFF;
+    &:hover{
+      background: #fff;
+      color: #000;
+    }
+  }
+}
+
+.col-10{
+  font-size: 18px;
+}

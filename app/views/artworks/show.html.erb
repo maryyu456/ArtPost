@@ -1,30 +1,38 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-1">
+  </div>
+  <div class="col-sm">
+    <p>
+      <strong>作品名稱:</strong>
+      <%= @artwork.name %>
+    </p>
+    
+    <p>
+      <strong>作品描述:</strong>
+      <%= @artwork.description %>
+    </p>
+    
+    
+    <p>
+      <strong>上傳圖片:</strong>
+      <%= image_tag @artwork.image_url(:thumb).to_s %>
+    </p>
+    <% if can? :update, @artwork %>
+      <%= link_to '編輯', edit_artwork_path(@artwork), class: "btn btn-success" %>
+    <% end %>
+    <!--if can? :update, @artwork-->
+    
+    <%= link_to '上一頁', artworks_path, class:"badge badge-primary" %>
+    
+    <hr/>
+    <% if can? :destroy, @artwork %>
+      <%= link_to '刪除', @artwork, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
+    <% end %>
+  </div>
+  <div class="col-1">
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @artwork.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @artwork.description %>
-</p>
-
-
-<p>
-  <strong>image:</strong>
-  <%= image_tag @artwork.image_url(:thumb).to_s %>
-</p>
-<% if can? :update, @artwork %>
-  <%= link_to '編輯', edit_artwork_path(@artwork), class: "btn btn-success" %>
-<% end %>
-<!--if can? :update, @artwork-->
-
-<%= link_to 'Back', artworks_path, class:"btn btn-dark" %>
-
-<hr/>
-<% if can? :destroy, @artwork %>
-  <%= link_to '刪除', @artwork, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
-<% end %>
 
 

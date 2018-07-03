@@ -26,8 +26,8 @@
                 <div class="card-body">
                   <h5 class="card-title"><%= artwork.name %></h5>
                   <p class="card-text"><%= artwork.description %></p>
-                  <%= link_to 'Show', artwork, class:"btn btn-info" %>
-                  <span>作者：<%= artwork.user.display_name %></span>
+                  <p>作者：<%= artwork.user.display_name %></p>
+                  <%= link_to "作品詳細資訊", artwork, class:"btn btn-info" %>
                 </div>
               </div>
             <% end %>
@@ -44,8 +44,8 @@
                     <div class="card-body">
                       <h5 class="card-title"><%= artwork.name %></h5>
                       <p class="card-text"><%= artwork.description %></p>
-                      <%= link_to 'Show', artwork, class:"btn btn-info" %>
                       <span>作者：<%= artwork.user.display_name %></span>
+                      <%= link_to "作品詳細資訊", artwork, class:"btn btn-info" %>
                     </div>
                   </div>
                 <% elsif @artworks.empty? %>
