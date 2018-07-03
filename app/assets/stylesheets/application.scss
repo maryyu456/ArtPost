@@ -48,9 +48,24 @@ body{
   z-index: 5;
 }
 .btn-color{
+  font-family: "Microsoft JhengHei", sans-serif;
   background: #5975a5;
   margin: 5px;
   color: #FFF;
+  &:hover{
+    background: #fff;
+    color: #000;
+  }
+}
+.btn-sign{
+  font-family: "Microsoft JhengHei", sans-serif;
+  background: #666;
+  color: #fff;
+  margin: 5px;
+  &:hover{
+    background: #ddd;
+    color: #000;
+  }
 }
 
 .post-btn{
@@ -80,5 +95,6 @@ body{
 .card-img-top img{
   width: 100%;
 }
+
 
 

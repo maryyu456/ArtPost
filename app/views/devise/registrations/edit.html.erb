@@ -8,17 +8,17 @@
       <%= f.error_notification %>
     
       <div class="form-inputs">
-        <%= f.input :email, required: true, autofocus: true %>
+        <%= f.input :email, label: "電子郵件", required: true, autofocus: true %>
     
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
         <% end %>
         <div class="row">
           <div class="col-sm">
-            <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+            <%= f.input :password, label:"密碼", autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
           </div>
           <div class="col-sm">
-            <%= f.input :password_confirmation, required: false %>
+            <%= f.input :password_confirmation, label:"密碼確認", required: false %>
           </div>
         </div>
       </div>
@@ -27,27 +27,27 @@
       <%= f.fields_for :profile do |p| %>
         <div class="row">
           <div class="col-sm">
-            <%= p.input :first_name %>
+            <%= p.input :first_name, label: "名字" %>
           </div>
           <div class="col-sm">
-           <%= p.input :last_name %>
+           <%= p.input :last_name, label: "姓氏" %>
           </div>
           <div class="col-sm">
-            <%= p.input :nickname %>
+            <%= p.input :nickname, label: "暱稱" %>
           </div>
         </div>
       <% end %>
     
       <div class="form-actions">
-        <%= f.button :submit, "Update" %>
+        <%= f.button :submit, "更新個人檔案", class: "btn btn-color" %>
       </div>
     <% end %>
     
     <h3>Cancel my account</h3>
     
-    <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "badge badge-danger" %></p>
     
-    <%= link_to "Back", artworks_path %>
+    <%= link_to "上一頁", artworks_path, class: "badge badge-primary" %>
 
   </div>
   <div class="col-1">
