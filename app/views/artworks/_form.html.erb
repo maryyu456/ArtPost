@@ -7,7 +7,7 @@
     <%= f.input :name, label: "作品名稱" %>
     <%= f.input :description, label: "作品描述" %>
     <!--%= f.association :user %>-->
-    <%= f.input :image, label: "上傳圖片", class: "custom-file" %> <!-- 上傳 -->
+    <%= f.input :image, label: "上傳圖片", class: "custom-file" %>
 　  <%= f.check_box :remove_image %> <!-- 刪除 -->
 　  <%= f.hidden_field :image_cache %>  <!--快取 _cache (讓填表時若有誤，不用重新選擇圖片) -->
 　  <!--%= image_tag @artwork.image_url(:thumb)%>  <!--如果 user 已有圖片的話，就顯示-->
