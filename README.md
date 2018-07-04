@@ -1,9 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+這是一個繪圖作品的上傳平台，可以觀看別人的作品，以及修改刪除自己的作品
 
 * Ruby version
 
